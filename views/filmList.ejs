@@ -1,0 +1,9 @@
+<ul>
+<%
+for(var i=0; i<filmlist.length; i++){
+%>
+  <li><a href="/filmDetails/<%= filmlist[i].filmID%>"><%= filmlist[i].filmName%> (<%= filmlist[i].filmCert%>)</a> <a href="/filmUpdate/<%= filmlist[i].filmID%>">Edit</a></li>
+<%
+}
+%>
+</ul>

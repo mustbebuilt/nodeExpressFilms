@@ -1,0 +1,20 @@
+<h2>Film Search</h2>
+<form>
+<p>
+<label>Film title</label>
+<input type="text" name="filmName">
+</p>
+<p>
+<input type="submit" value="Search">
+</p>
+</form>
+
+<ul>
+<%
+for(var i=0; i<filmlist.length; i++){
+%>
+  <li><a href="/filmDetails/<%= filmlist[i].filmID%>"><%= filmlist[i].filmName%> (<%= filmlist[i].filmCert%>)</a></li>
+<%
+}
+%>
+</ul>
